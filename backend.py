@@ -241,11 +241,10 @@ _conn=psycopg.connect(
 _conn.autocommit = True # it is used to set the connection to autocommit mode, meaning that each SQL statement is automatically committed to the database without requiring an explicit commit command.
 
 
-checkpointer=PostgresSaver(_conn)
+checkpointer = PostgresSaver(_conn)
 checkpointer.setup()
 
-
-travel_graph=graph.compile(checkpointer=checkpointer) # It is used to compile the state graph with the PostgreSQL checkpointer, enabling the saving and loading of the travel planning process state to and from the database.
+travel_graph = graph.compile(checkpointer=checkpointer) # It is used to compile the state graph with the PostgreSQL checkpointer, enabling the saving and loading of the travel planning process state to and from the database.
 
 
 
