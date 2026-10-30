@@ -7,6 +7,7 @@ load_dotenv()
 os.environ["SSL_CERT_FILE"] = certifi.where()
 os.environ["REQUESTS_CA_BUNDLE"] = certifi.where()
 
+
 from typing import TypedDict,Annotated
 import operator  # It is used to perform operations on the data, such as sorting or filtering.
 import uuid 
